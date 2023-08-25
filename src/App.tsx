@@ -1,20 +1,21 @@
 import '../reset.css';
 import '../header.css';
 import '../style.css';
+import React from 'react';
 
 import Header from './components/Header';
 import { CharacterRatings } from './components/CharacterRatings';
 import CharacterCards from './components/CharacterCards';
-import Character from '../src/assets/fma-data';
+import characters from './assets/fma-data';
 
 function App() {
   return (
     <>
       <Header />
-      <CharacterRatings data={Character} />
-      <CharacterCards data={Character} />
+      <CharacterRatings characters={characters} />
+      <CharacterCards characters={characters} />
     </>
   );
 }
 
-export default App;
+export { App };

@@ -7,7 +7,7 @@ type Character = {
   nickName: null | string;
 };
 
- const data: Character[] = [
+ const characters: Character[] = [
   {
     name: "Alex Louis Armstrong",
     nickName: "Major Armstrong",
@@ -50,7 +50,7 @@ type Character = {
   {
     name: "Nina Tucker",
     nickName: null,
-    skillset: ["Being Adorable", "Combining..."],
+    skillset: ["Being Adorable", "ComCharacter bining..."],
     votes: 80,
     imageUrl:
       "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/08/fullmetal-alchemist-nina-tucker.jpg",
@@ -98,4 +98,4 @@ type Character = {
   },
 ]; 
 
-export default data;
+export default characters;

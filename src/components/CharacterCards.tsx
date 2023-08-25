@@ -1,13 +1,24 @@
+import React, { Component } from 'react';
 import '../../character-cards.css';
-import PropTypes from 'prop-types';
 
-import { Component } from 'react';
+type Character = {
+  name: string;
+  skillset: string[];
+  votes: number;
+  imageUrl: string;
+  background: string;
+  nickName: null | string;
+};
 
-class CharacterCards extends Component {
+type CharacterCardsProps = {
+  characters: Character[];
+};
+
+class CharacterCards extends Component<CharacterCardsProps> {
   render() {
     return (
       <section id="character-cards">
-        {this.props.data.map((item, index) => (
+        {this.props.characters.map((item, index) => (
           <div className="card" key={index}>
             <div className="card-titles">
               <h3>{item.name}</h3>
@@ -22,5 +33,4 @@ class CharacterCards extends Component {
   }
 }
 
-CharacterCards.propTypes = PropTypes;
 export default CharacterCards;
